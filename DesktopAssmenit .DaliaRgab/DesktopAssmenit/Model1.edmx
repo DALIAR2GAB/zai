@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="profileModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="User_">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="60" />
+          <Property Name="password_" Type="varchar" MaxLength="60" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Gender" Type="varchar" MaxLength="80" />
+          <Property Name="phonenum" Type="varchar" MaxLength="80" />
+          <Property Name="city" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="User_1">
+          <Key>
+            <PropertyRef Name="phonenum" />
+          </Key>
+          <Property Name="userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="60" />
+          <Property Name="password_" Type="varchar" MaxLength="60" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Gender" Type="varchar" MaxLength="80" />
+          <Property Name="phonenum" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="city" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="profileModelStoreContainer">
+          <EntitySet Name="User_" EntityType="Self.User_" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_1" EntityType="Self.User_1" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="profileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="User_">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="password_" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Gender" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="phonenum" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="profileEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="User_" EntityType="Self.User_" />
+          <EntitySet Name="User_1" EntityType="profileModel.User_1" />
+        </EntityContainer>
+        <EntityType Name="User_1">
+          <Key>
+            <PropertyRef Name="phonenum" />
+          </Key>
+          <Property Name="userid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="password_" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Gender" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="phonenum" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="profileModelStoreContainer" CdmEntityContainer="profileEntities">
+          <EntitySetMapping Name="User_">
+            <EntityTypeMapping TypeName="profileModel.User_">
+              <MappingFragment StoreEntitySet="User_">
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="password_" ColumnName="password_" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="phonenum" ColumnName="phonenum" />
+                <ScalarProperty Name="city" ColumnName="city" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_1">
+            <EntityTypeMapping TypeName="profileModel.User_1">
+              <MappingFragment StoreEntitySet="User_1">
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="phonenum" ColumnName="phonenum" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="password_" ColumnName="password_" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

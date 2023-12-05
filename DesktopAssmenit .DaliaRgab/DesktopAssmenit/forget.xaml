@@ -1,0 +1,22 @@
+﻿<Page x:Class="DesktopAssmenit.forget"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DesktopAssmenit"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="forget">
+    <StackPanel>
+     <Grid Background="Bisque">
+            <Border Margin="120,61,120,25" Background="White"></Border>
+        <Label Content="phone num" Margin="156,120,507,304"></Label>
+            <Label Content="confirm password" Margin="156,230,507,194"></Label>
+            <Label Content="new password" Margin="156,177,507,248"></Label>
+        <TextBox Margin="298,115,120,290" Name="use"></TextBox>
+            <TextBox Margin="298,243,120,162" Name="use1"></TextBox>
+            <TextBox Margin="298,180,120,225" Name="pass1"></TextBox>
+        <Button Margin="449,310,152,99" Content="Update password" Background="AliceBlue" Click="Button_Click"></Button>
+     </Grid>
+    </StackPanel>
+</Page>

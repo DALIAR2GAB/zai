@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="profileModelStoreContainer" CdmEntityContainer="profileEntities">
+    <EntitySetMapping Name="User_">
+      <EntityTypeMapping TypeName="profileModel.User_">
+        <MappingFragment StoreEntitySet="User_">
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="password_" ColumnName="password_" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="phonenum" ColumnName="phonenum" />
+          <ScalarProperty Name="city" ColumnName="city" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_1">
+      <EntityTypeMapping TypeName="profileModel.User_1">
+        <MappingFragment StoreEntitySet="User_1">
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="phonenum" ColumnName="phonenum" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="password_" ColumnName="password_" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
